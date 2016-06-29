@@ -1,0 +1,48 @@
+<head>
+<style>
+body {
+    background-color: linen;
+}
+div {
+    margin: 50px auto;
+    width: 50%;
+}
+form {
+    margin: 20px auto;
+}
+
+input {
+    display:block;
+    margin-top: 5px;
+}
+</style>
+</head>
+<body>
+
+
+<div>
+<h1> Timestamp Microservice</h1>
+
+<p> To use the service either enter a unix time or natural time in the forms below to recieve the times in both formats,
+or append one to the url of this site.</p>
+
+<h3> Example usage: </h3>
+https://timestamp-ms.herokuapp.com/December%2015,%202015
+https://timestamp-ms.herokuapp.com/1450137600
+
+<h3>Example output:</h3>
+{ "unix": 1450137600, "natural": "December 15, 2015" }
+
+
+<form action="/" method="POST">
+    <input type="text" name="time" placeholder="time">
+    <button>Submit!</button>
+</form>
+
+<form action="/current" method="POST">
+    <button>Current Time!</button>
+</form>
+
+
+</div>
+</body>
